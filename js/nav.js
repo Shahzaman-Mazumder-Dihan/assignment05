@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     n.style.fontFamily='Raleway';
   });
   dropdown.forEach(function(d) {
-    d.classList.add('text-center', 'text-gray-950', 'text-opacity-70', 'text-lg', 'font-medium')
-    d.style.fontFamily='Raleway';
+   
   });
     
 });

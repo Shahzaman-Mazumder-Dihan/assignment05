@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   paragraph.forEach(function(p) {
-
+    p.classList.add('min-w-3', 'text-gray-950', 'text-opacity-50', 'text-lg', 'font-medium');
+    p.style.fontFamily="Inter";
   });    
 });
