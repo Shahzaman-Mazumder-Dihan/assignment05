@@ -4,6 +4,6 @@ function navigateToSeat() {
 
   // Example: Scroll to the element
   if (seatElement) {
-   
+    seatElement.scrollIntoView({ behavior: 'smooth' });
   }
 }

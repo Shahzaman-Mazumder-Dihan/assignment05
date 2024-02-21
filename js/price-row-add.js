@@ -43,7 +43,9 @@ function addNewRow(button) {
   remainingSeatsText.innerText = remainingSeats;
   numberOfBookedSeat++;
   numberOfBookedSeatText.innerText = numberOfBookedSeat;
-
+  totalPrice = numberOfBookedSeat * 550;
+  totalPriceText.innerText = totalPrice;
+  grandPriceText.innerText = totalPrice;
 
   document.getElementById('nxt-btn').classList.remove('pointer-events-none', 'opacity-50');
   

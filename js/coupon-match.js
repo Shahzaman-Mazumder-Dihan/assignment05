@@ -15,6 +15,6 @@ function applyCoupon() {
     document.getElementById('coupon-level').classList.add('hidden');
     document.getElementById('grand-total-container').classList.add("bg-teal-200", "px-1", "py-2", "rounded-md");
   } else {
-   
+    alert("Wrong Coupon Code. Please Enter Correctly. Coupon Codes are case sensitive");
   }
 }
