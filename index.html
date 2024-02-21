@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <title>Amader-Ticket</title>
+</head>
+
+<body>
+  <header class="px-4 py-2 lg:px-32 lg:py-12">
+    <nav class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a class="">Home</a></li>
+            <li><a class="">About</a></li>
+            <li><a class="">Contacts</a></li>
+            <li><a class="">Download</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost text-center text-gray-950 text-4xl font-extrabold font-['Raleway']"
+          href="" target="_blank">Amader-Ticket</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a class="">Home</a></li>
+          <li><a class="">About</a></li>
+          <li><a class="">Contacts</a></li>
+          <li><a class="">Download</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <button
+          class="w-[130px] h-14 px-[30px] py-4 bg-lime-600 bg-opacity-10 rounded-xl border border-lime-400 border-opacity-40 justify-center items-center gap-2.5 inline-flex">
+          <div class="text-center text-[#1DD100] text-xl font-bold font-['Raleway']">Bus</div>
+          <img src="images/bus-icon.png" class="w-6 h-6 relative flex-col justify-start items-start inline-flex">
+        </button>
+      </div>
+    </nav>
+    <section class="banner-section mt-4 lg:mt-9 relative">
+      <img src="images/banner.png" class="w-full rounded-[20px]">
+      <div
+        class="w-full h-full absolute top-0 left-0 flex justify-center items-center flex-col  gap-4 lg:gap-10 py-[70px]">
+        <h2
+          class="w-3/5 text-center text-white text-3xl lg:text-[64px] font-extrabold font-['Raleway'] leading-10 lg:leading-[86px]">
+         <br> Travel  with <span class="text-[#cfba1f]"><br>Amader-Travel</span></h2>
+        <p class="w-11/12 lg:w-[691px] text-center text-white text-lg font-normal font-['Inter']">Book Now & Save More — Choose from 90,000+ travel routes. Compare prices from 500+ options with huge savings</p>
+        <button onclick="navigateToSeat()"
+          class="w-28 lg:w-[170px] h-8 lg:h-[65px] lg:px-[30px] py-[21px] bg-[#cfba1f] rounded-xl justify-center items-center inline-flex lg:mt-3">
+          <div class="text-center text-gray-950 text-sm lg:text-xl font-bold font-['Raleway']">Buy Tickets</div>
+        </button>
+      </div>
+    </section>
+  </header>
+
+  <main class="flex flex-col justify-between gap-10 lg:gap-[120px]">
+    <section class="offer-section px-4 lg:px-32 flex flex-col gap-6 lg:gap-12 justify-center">
+      <h1 class="text-center text-gray-950 text-3xl lg:text-[40px] font-bold font-['Raleway']">Best offers for you</h1>
+      <div class="flex justify-between flex-col items-center gap-4 lg:flex-row">
+        <div class="w-max coupon-1 bg-green-500 rounded-3xl flex gap-0">
+          <div class="offer-percentage flex flex-col justify-center items-center px-8 lg:px-[52px]">
+            <div>
+              <h2
+                class="text-gray-950 text-opacity-80 text-3xl lg:text-[40px] font-black font-['Inter'] leading-4 lg:leading-9">
+                15% OFF</h2>
+              <br />
+              <span
+                class="text-gray-950 text-opacity-80 text-base lg:text-xl font-semibold font-['Inter'] leading-4 lg:leading-9">on
+                your next purchase</span><br />
+              <span class="text-gray-950 text-opacity-50 text-sm lg:text-lg font-medium font-['Inter'] leading-9">use by
+                May 2024</span>
+            </div>
+          </div>
+          <img src="images/cupon-devider.png" class="max-h-48 lg:h-full">
+          <div class="coupon-code flex flex-col justify-center items-center px-4 lg:px-[52px]">
+            <h2 id="first-coupon"
+              class="text-center min-w-[150px] text-gray-950 text-3xl  font-bold font-['Raleway'] leading-[57.60px]">
+              NEW15</h2>
+            <p class=" text-opacity-40  text-lg font-medium font-['Raleway'] leading-9">Coupon Code</p>
+          </div>
+        </div>
+        <div class="coupon-2 bg-blue-500 rounded-3xl flex gap-0">
+          <div class="offer-percentage flex flex-col justify-center items-center px-8 lg:px-[52px]">
+            <div>
+              <h2
+                class="text-gray-950 text-opacity-80 text-3xl lg:text-[40px] font-black font-['Inter'] leading-4 lg:leading-9">
+                20% OFF</h2>
+              <br />
+
+              <span
+                class="text-gray-950 text-opacity-80 text-base lg:text-xl font-semibold font-['Inter'] leading-4 lg:leading-9">on
+                your next
+                purchase</span><br />
+              <span class="text-gray-950 text-opacity-50 text-sm lg:text-lg font-medium font-['Inter'] leading-9">use by
+                May
+                2024</span>
+            </div>
+          </div>
+          <img src="images/cupon-devider.png" class="max-h-48 lg:h-full">
+          <div class="coupon-code flex flex-col justify-center items-center px-4 lg:px-[52px]">
+            <h2 id="second-coupon"
+              class="text-center min-w-[150px] text-gray-950 text-3xl  font-bold font-['Raleway'] leading-[57.60px]">
+              Couple 20</h2>
+            <p class="text-white text-opacity-40  text-lg font-medium font-['Raleway'] leading-9">Coupon Code</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="w-max h-14 px-[30px] py-4 bg-opacity-10 rounded-xl border border-[#1DD100] border-opacity-40 justify-center items-center gap-2.5 inline-flex mx-auto mt-4 text-[green] text-xl font-bold font-['Raleway']">See
+        All Offers</button>
+    </section>
+    <section
+      class="buy-ticket w-full bg-stone-50 rounded-tl-[88px] rounded-tr-[88px] border-t-2 border-lime-400 px-8 lg:px-[135px] py-8 lg:py-[120px] flex flex-col gap-4 lg:gap-6">
+
+      <h2 class="text-center text-gray-950 text-3xl lg:text-[40px] font-bold font-['Raleway']">Amader-Travel</h2>
+      <p
+        class="w-9/12 lg:w-[736px] text-center text-gray-950 text-opacity-60 text-sm lg:text-lg font-normal font-['Inter'] leading-7 lg:leading-[30px] mx-auto">
+        Book Now & Save More Compare prices from 500+  with huge savings</p>
+      <div class="bus-info-container flex flex-col lg:flex-row bg-white mt-6">
+        <div class="bus-info flex-1 p-8">
+          <div class="bus-info-head flex items-center gap-4">
+            <img src="images/bus-logo.png" alt="">
+            <div class="bus-info-head-header">
+              <h2 class="text-gray-950 text-xl lg:text-[32px] font-bold font-['Raleway']">Book-Ticket</h2>
+              <p class="text-gray-950 text-opacity-60 text-sm lg:text-lg font-normal mt-2 font-['Inter']">Bud-509-AC
+              </p>
+            </div>
+            <div
+              class="w-[250px] max-h-fit px-4 lg:px-[30px] py-4 bg-lime-600 bg-opacity-10 rounded-xl border border-lime-400 border-opacity-40 justify-center items-center gap-2.5 inline-flex ml-auto">
+              <img src="images/seat-green.png" class="w-8 h-8">
+              <div class="min-w-24 text-center text-[#1DD100] text-lg font-medium font-['Inter']">
+                <span id="remaining-seat">40</span> seats left
+              </div>
+            </div>
+          </div>
+          <div class="bus-schedule bg-stone-50 rounded-3xl p-8 flex flex-col gap-6">
+            <div class="route flex justify-between">
+              <p class="text-gray-950 text-opacity-60 text-base lg:text-lg font-semibold font-['Raleway']">Route</p>
+              <p class="text-gray-950 text-opacity-60 text-base lg:text-lg font-semibold font-['Raleway']">Dhaka-Cox-Bazar
+              </p>
+            </div>
+            <div class="w-full h-[0px] border border-dashed border-gray-950 border-opacity-20"></div>
+            <div class="departure  flex justify-between">
+              <p class="text-gray-950 text-opacity-60 text-base lg:text-lg font-semibold font-['Raleway']">Departure
+                Time</p>
+              <p class="text-gray-950 text-opacity-60 text-base lg:text-lg font-semibold font-['Raleway']">6:00 PM</p>
+            </div>
+            <div class="w-full h-[0px] border border-dashed border-gray-950 border-opacity-20"></div>
+            <div class="destination-info flex justify-between gap-2 lg:gap-6">
+              <div class="bg-gray-950 bg-opacity-5 rounded-xl flex justify-center items-center p-2 lg:p-4">
+                <h3 class="text-xs text-center lg:text-base text-gray-950 text-opacity-80 font-medium font-['Inter']">
+                  Boarding Point - Saydabad</h3>
+              </div>
+              <div class="bg-gray-950 bg-opacity-5 rounded-xl flex justify-center items-center p-2 lg:p-4">
+                <h3 class="text-xs text-center lg:text-base text-gray-950 text-opacity-80 font-medium font-['Inter']">
+                  Dropping Point - Cox-bazar-beach</h3>
+              </div>
+              <div class="bg-gray-950 bg-opacity-5 rounded-xl flex justify-center items-center p-2 lg:p-4">
+                <h3 class="text-xs text-center lg:text-base text-gray-950 text-opacity-80 font-medium font-['Inter']">
+                  Est. Time - 9 Hour</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="images/info-devider.png" alt="" class="hidden lg:block">
+        <div class="ticket-price-container flex flex-col items-center justify-center gap-6 flex-1">
+          <img src="images/fare.png" alt="" class="w-16">
+          <div class="text-center text-gray-950 text-4xl font-bold font-['Raleway'] leading-10">
+            <span id="per-ticket-price">550</span> Taka
+            <br />
+            <span class="text-gray-950 text-opacity-60 text-3xl font-semibold">Per Seat</span>
+          </div>
+        </div>
+      </div>
+      <div id="ticketing-interface"
+        class="ticketing-interface flex flex-col lg:flex-row justify-between border p-4 lg:p-8 bg-white rounded-[24px] gap-6">
+        <div class="select-your-seat flex flex-col gap-4 w-full lg:w-1/2">
+          <h2 class="text-gray-950 text-2xl font-semibold font-['Raleway'] lg:mb-2  text-center lg:text-left">Select
+            Your Seat</h2>
+          <div class="w-full h-[0px] border border-gray-950 border-dashed border-opacity-20"></div>
+          <div class="seat-status flex justify-between">
+            <div class="available-seat flex gap-2">
+              <img src="images/seat-gray.png" class="w-7 h-7">
+              <h3 class="text-gray-950 text-opacity-50 text-lg font-medium font-['Inter']">Available</h3>
+            </div>
+            <div class="filled-seat flex gap-2">
+              <img src="images/seat-green-filled.png" class="w-7 h-7">
+              <h3 class="text-[#1DD100] text-lg font-medium font-['Inter']">Selected</h3>
+            </div>
+          </div>
+          <div class="w-full h-[0px] border border-gray-950 border-dashed border-opacity-20"></div>
+          <div class="seats flex flex-col gap-4 lg:gap-6">
+            <div class="seat-0">
+              <div class="ml-auto driver-seat w-[110px] h-14 bg-blue-300 rounded-xl flex justify-center items-center">
+                <img src="images/steering-wheel.png">
+              </div>
+            </div>
+            <div class="seat-A flex gap-4 lg:gap-8 items-center">
+              <p class="">A</p>
+              <button id="seat-A1" class="">A1</button>
+              <button id="seat-A2" class="mr-auto">A2</button>
+              <button id="seat-A3" class="">A3</button>
+              <button id="seat-A4" class="">A4</button>
+            </div>
+
+            <div class="seat-B flex gap-4 lg:gap-8 items-center">
+              <p class="">B</p>
+              <button id="seat-B1" class="">B1</button>
+              <button id="seat-B2" class="mr-auto">B2</button>
+              <button id="seat-B3" class="">B3</button>
+              <button id="seat-B4" class="">B4</button>
+            </div>
+            <div class="seat-C flex gap-4 lg:gap-8 items-center">
+              <p class="">C</p>
+              <button id="seat-C1" class="">C1</button>
+              <button id="seat-C2" class="mr-auto">C2</button>
+              <button id="seat-C3" class="">C3</button>
+              <button id="seat-C4" class="">C4</button>
+            </div>
+            <div class="seat-D flex gap-4 lg:gap-8 items-center">
+              <p class="">D</p>
+              <button id="seat-D1" class="">D1</button>
+              <button id="seat-D2" class="mr-auto">D2</button>
+              <button id="seat-D3" class="">D3</button>
+              <button id="seat-D4" class="">D4</button>
+            </div>
+            <div class="seat-E flex gap-4 lg:gap-8 items-center">
+              <p class="">E</p>
+              <button id="seat-E1" class="">E1</button>
+              <button id="seat-E2" class="mr-auto">E2</button>
+              <button id="seat-E3" class="">E3</button>
+              <button id="seat-E4" class="">E4</button>
+            </div>
+            <div class="seat-F flex gap-4 lg:gap-8 items-center">
+              <p class="">F</p>
+              <button id="seat-F1" class="">F1</button>
+              <button id="seat-F2" class="mr-auto">F2</button>
+              <button id="seat-F3" class="">F3</button>
+              <button id="seat-F4" class="">F4</button>
+            </div>
+            <div class="seat-G flex gap-4 lg:gap-8 items-center">
+              <p class="">G</p>
+              <button id="seat-G1" class="">G1</button>
+              <button id="seat-G2" class="mr-auto">G2</button>
+              <button id="seat-G3" class="">G3</button>
+              <button id="seat-G4" class="">G4</button>
+            </div>
+            <div class="seat-H flex gap-4 lg:gap-8 items-center">
+              <p class="">H</p>
+              <button id="seat-H1" class="">H1</button>
+              <button id="seat-H2" class="mr-auto">H2</button>
+              <button id="seat-H3" class="">H3</button>
+              <button id="seat-H4" class="">H4</button>
+            </div>
+            <div class="seat-I flex gap-4 lg:gap-8 items-center">
+              <p class="">I</p>
+              <button id="seat-I1" class="">I1</button>
+              <button id="seat-I2" class="mr-auto">I2</button>
+              <button id="seat-I3" class="">I3</button>
+              <button id="seat-I4" class="">I4</button>
+            </div>
+            <div class="seat-J flex gap-4 lg:gap-8 items-center">
+              <p class="">J</p>
+              <button id="seat-J1" class="">J1</button>
+              <button id="seat-J2" class="mr-auto">J2</button>
+              <button id="seat-J3" class="">J3</button>
+              <button id="seat-J4" class="">J4</button>
+            </div>
+
+          </div>
+        </div>
+        <div class="divider w-0 h-full hidden lg:block border-2 border-gray-950 border-opacity-30"></div>
+
+        <div id="seat-you-selected" class="seat-you-selected flex flex-col gap-4 lg:gap-6 w-full lg:w-5/12">
+          <h2 class="text-center text-gray-950 text-2xl font-semibold font-['Raleway']">Seats You Selected</h2>
+          <div class="w-full h-[0px] border border-gray-950 border-opacity-20 border-dashed"></div>
+
+          <div class="booked-cart w-full bg-stone-200 rounded-xl p-8 flex flex-col gap-4">
+
+            <div id="price-container" class="price-container grid grid-cols-3 gap-4 justify-items-start w-full">
+              <div class="flex items-center  justify-center gap-1">
+                <h3 class="text-gray-950  font-medium font-['Inter']">Seat</h3>
+                <div class="w-[23px] h-[13px] bg-[#1DD100] rounded-[5px] flex justify-center items-center">
+                  <div id="booked-seat-number" class="text-center text-white text-xs font-bold font-['Inter']">0</div>
+                </div>
+              </div>
+
+              <h3 class=" text-gray-950 justify-self-center font-medium font-['Inter']">Class</h3>
+              <h3 class="text-gray-950 justify-self-end font-medium font-['Inter']">Price</h3>
+              <div
+                class="w-full h-[0px] col-span-3 border border-dashed border-gray-950 border-opacity-20 justify-self-stretch">
+              </div>
+            </div>
+
+            <div class="w-full h-[0px] border border-gray-950 border-opacity-20"></div>
+            <div class="flex justify-between text-gray-950 text-base font-medium font-['Inter']">
+              <h3 class="">Total Price</h3>
+              <h3 class="">BDT <span id="total-price">0</span></h3>
+            </div>
+            <label id="coupon-level" class="input flex items-center">
+              <input id="input-coupon" type="text" class="grow" placeholder="Have any Coupon?" />
+              <button id="apply-btn" onclick="applyCoupon()"
+                class="btn w-20 h-10 bg-[blue] hover:bg-green-500 rounded-lg text-white text-base font-semibold font-['Inter'] opacity-40 pointer-events-none">Apply</button>
+            </label>
+            <div id="grand-total-container" class="text-gray-950 text-lg font-medium font-['Inter'] flex justify-between">
+              <h3>Grand Total</h3>
+              <h3>BDT <span id="grand-total">0</span></h3>
+            </div>
+          </div>
+          <form action="javascript:successMessage()" class="flex flex-col gap-6">
+            <h2 class="text-gray-950 text-base font-semibold font-['Inter']">Passenger Name*</h2>
+            <label class="input input-bordered flex items-center gap-2 p-8 rounded-xl">
+              <input id="passenger-name" type="text" class="grow" placeholder="Enter Your Name" required />
+            </label>
+            <h2 class="text-gray-950 text-base font-semibold font-['Inter']">Phone Number*</h2>
+            <label class="input input-bordered flex items-center gap-2 p-8 rounded-xl">
+              <input id="phone-number" type="number" class="grow" placeholder="Enter Your Phone Number" required />
+            </label>
+            <h2 class="text-gray-950 text-base font-semibold font-['Inter']">Email ID</h2>
+            <label class="input input-bordered flex items-center gap-2 p-8 rounded-xl">
+              <input type="email" class="grow" placeholder="Enter Your Email ID" />
+            </label>
+            <button id="nxt-btn" type="submit" onclick="successMessage()"
+              class="w-full py-[21px] bg-[#1dd100] rounded-2xl text-center text-white text-xl font-extrabold font-['Raleway'] pointer-events-none opacity-50">Next</button>
+            <div class="terms-n-condition flex justify-around">
+              <a class="text-gray-950 text-opacity-60 text-base font-normal font-['Inter'] underline cursor-pointer">Terms
+                and Conditions</a>
+              <a class="text-gray-950 text-opacity-60 text-base font-normal font-['Inter'] underline cursor-pointer">Cancellation
+                Policy</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section id="success-msg-container"
+      class="success-msg-container bg-stone-50 w-full h-screen justify-center items-center fixed top-0 left-0 hidden">
+      <div class="success-msg px-16 py-14 bg-white max-w-fit flex flex-col items-center justify-between gap-5">
+        <img src="images/success.png" alt="" class="mb-5">
+        <div class="text-center text-green-500 text-2xl font-bold font-['Roboto' mb-5">SUCCESS</div>
+        <div class="text-center"><span class="text-neutral-600 text-xl font-medium font-['Roboto']">Thank you for
+            Booking Our Bus Seats. <br />We hope for your safe and pleasent Journey;
+            <br /></span><span class="text-neutral-600 text-xl font-light font-['Roboto'] leading-[33.44px]"></span></div>
+        <button onclick="document.getElementById('success-msg-container').classList.add('hidden')"
+          class="w-[300px] h-14 bg-green-500 rounded-[32px]">
+          <h3 class="text-white text-xl font-semibold font-['Roboto']">Continue</h3>
+        </button>
+      </div>
+    </section>
+  </main>
+  <footer class="w-full bg-black px-10 lg:px-[135px] py-8 lg:py-[120px]">
+    <section class="footer-section-1 flex justify-between items-center mb-[48px]">
+      <div class="flex flex-col gap-4">
+        <h2 class="text-left text-white text-2xl lg:text-4xl font-extrabold font-['Raleway']">Amader-Travel</h2>
+        <p class="w-[374px] text-white text-opacity-80 text-sm lg:text-lg font-normal font-['Inter'] leading-[30px]">
+          Ticket in a digital platform is to make your daily commuting better.</p>
+      </div>
+      <div class="flex flex-col gap-5">
+        <p class="text-right text-white text-xl font-semibold font-['Raleway']">Download our app</p>
+        <a href="" target="_blank">
+          <img src="images/play-store-button.png" alt="">
+        </a>
+      </div>
+    </section>
+    <div class="w-full h-[0px] origin-top-left border-t-2 border-dashed border-white border-opacity-30 my-8">
+    </div>
+    <section class="footer-section-2 flex justify-between gap-10 text-['Inter'] text-white">
+      <p class="text-opacity-70 mr-auto underline">@all rights reserved 2024</p>
+      <p class="underline">Terms & condition</p>
+      <p class="underline">Return & refund policy</p>
+      <p class="underline">Privacy policy</p>
+
+    </section>
+  </footer>
+  <script src="js/nav.js"></script>
+  <script src="js/seats.js"></script>
+  <script src="js/price-row-add.js"></script>
+  <script src="js/coupon-match.js"></script>
+  <script src="js/navigateToSeat.js"></script>
+  <script src="js/call AddNewRowFn.js"></script>
+  <script src="js/showSuccessPage.js"></script>
+</body>
+
+</html>
